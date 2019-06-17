@@ -124,3 +124,33 @@ document.getElementById('container').appendChild(a)
 const changeColor = function(x){
     document.getElementById(x).style.backgroundColor = getRandomColor()
 }
+
+const validate=function(){
+const form=document.getElementById("form")
+   const name=document.getElementById("name").value
+    if(name.length<3){
+        let a=document.createElement("div")
+        a.innerHTML=name+ " is not valid"
+        form.appendChild(a)
+    }
+const salary=document.getElementById("salary").value
+if(10000<salary<16000){
+    let a=document.createElement("div")
+a.innerHTML="Salary must be greater than 10,000 but less than 16,000"
+form.appendChild(a)
+}
+const birthday=document.getElementById("birthday").value
+if(birthday===null){
+    let a=document.createElement("div")
+    a.innerHTML="Birthday may not be null"
+form.appendChild(a)
+}
+const phone=document.getElementById("phone").value
+if(phone.length<11){
+    let a=document.createElement("div")
+    a.innerHTML="Phone must be 10 digits long"
+    form.appendChild(a)
+}
+
+}
+
