@@ -99,7 +99,28 @@ button.onclick = function () {
     name.innerHTML = "fuck off"
     document.body.appendChild(name)
 }
-    
 }
-const div=document.createElement("div")
-div.style.
+const getRandomColor = function() {
+    const niceColors = ["#8e44ad", "#3498db", "#c0392b", "#f1c40f", "#d35400", "#2ecc71", "#1abc9c", "#2c3e50", "#7f8c8d"]
+
+    const randomPosition = Math.floor(Math.random() * niceColors.length)
+    return niceColors[randomPosition]
+  }
+
+
+
+for(let i = 1; i < 7; i++){
+const  a = document.createElement('div')
+a.setAttribute('id','box' + i)
+a.style.display = 'inline-block'
+a.style.width = '50px'
+a.style.height = '50px'
+a.style.margin = '5px'
+a.setAttribute('onmouseenter', 'changeColor(id)')
+a.style.backgroundColor = getRandomColor()
+document.getElementById('container').appendChild(a)
+}
+
+const changeColor = function(x){
+    document.getElementById(x).style.backgroundColor = getRandomColor()
+}
