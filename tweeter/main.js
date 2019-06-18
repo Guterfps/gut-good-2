@@ -1,0 +1,60 @@
+const Tweeter=function(){
+  const posts=[ {
+    text: "First post!",
+    id: "p1",
+    comments: [
+        { id: "c1", text: "First comment on first post!" },
+        { id: "c2", text: "Second comment on first post!!" },
+        { id: "c3", text: "Third comment on first post!!!" }
+    ]
+},
+{
+    text: "Aw man, I wanted to be first",
+    id: "p2",
+    comments: [
+        { id: "c4", text: "Don't wory second poster, you'll be first one day." },
+        { id: "c5", text: "Yeah, believe in yourself!" },
+        { id: "c6", text: "Haha second place what a joke." }
+    ]
+}]
+const getPosts=function(){
+  return posts
+}
+const addPost=function(text){
+const num= posts.length +1
+   const l="p"+num
+  
+  posts.push({id: l,"text": text,comments:[]})
+}
+const removePost=function(a){
+for(let i=0;i<posts.length;i++){
+  if(posts[i].id===a){
+     posts.splice(i,1)
+  }
+}
+}
+const addComment=function(postid,text){
+  for(let i=0;i<posts.length;i++){
+    const c=posts[i].comments.length+1
+    if(posts[i].id===postid){
+       posts[i].comments={id:"c"+c,"text":text}
+    }
+}
+}
+return {
+  addPost:addPost,
+  getPosts:getPosts,
+  removePost:removePost,
+  addComment:addComment
+} 
+}
+
+const tweeter=Tweeter()
+tweeter.addPost("123")
+tweeter.addPost("123")
+tweeter.addPost("123")
+console.log(tweeter.getPosts())
+tweeter.removePost("p5")
+console.log(tweeter.getPosts())
+tweeter.addComment("p1","qwe")
+console.log(tweeter.getPosts())
