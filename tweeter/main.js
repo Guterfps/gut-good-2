@@ -34,6 +34,7 @@ for(let i=0;i<posts.length;i++){
 }
 }
 const addComment=function(postid,text){
+ 
   for(let i=0;i<posts.length;i++){
     const c=posts[i].comments.length+1
     if(posts[i].id===postid){
@@ -41,11 +42,13 @@ const addComment=function(postid,text){
     }
 }
 }
+
 return {
   addPost:addPost,
   getPosts:getPosts,
   removePost:removePost,
-  addComment:addComment
+  addComment:addComment,
+  
 } 
 }
 
@@ -58,3 +61,5 @@ tweeter.removePost("p5")
 console.log(tweeter.getPosts())
 tweeter.addComment("p1","qwe")
 console.log(tweeter.getPosts())
+
+
