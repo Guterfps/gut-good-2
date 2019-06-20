@@ -25,16 +25,26 @@
 .text-container-left{
 display: grid;
 align-content: space-evenly;
-
+background-color: blue;
+float: left;
+width: 10%;
+height: 25%;
+padding: 20px;
+margin: 10px;
+border-radius:10px; 
 }
 .text-container-right{
-    display: grid;
+   
     align-content: space-evenly;
     justify-content: end;
     background-color: green;
     box-sizing: content-box;
     text-align: right;
-    width: 10%;
+ margin-left:80%;
+    float:right;
+    margin-right: 10px;
+margin-bottom: 10px;
+border-radius:10px; 
 }
 #input{
     display: grid;
@@ -45,6 +55,24 @@ align-content: space-evenly;
 #send{
     display: grid;
     grid-area: s;
-    background-color: red;
     justify-content: end;
+   color: red;
+}
+.text{
+    float: left;
+    display:grid;
+    justify-self: start;
+    align-self: left;
+}
+.time{
+    float:right;
+    justify-self: end;
+    align-self: top;
+}
+
+#friends p{
+    background-color: antiquewhite;
+   height: 15%;
+margin: 5%;
+
 }
