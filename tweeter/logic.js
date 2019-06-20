@@ -65,8 +65,8 @@ return {
 } 
 }
 
-const tweeter=Tweeter()
-tweeter.addPost("123")
+
+/*  tweeter.addPost("123")
 tweeter.addPost("123")
 tweeter.addPost("123")
 console.log(tweeter.getPosts())
@@ -78,3 +78,4 @@ tweeter.addComment("p3","123")
 console.log(tweeter.getPosts())
 tweeter.removeComment("p1","c2")
 
+*/
