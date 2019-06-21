@@ -59,7 +59,6 @@ const Tweeter=function(){
     }
     let  num=0
     for(let i=0;i<posts.length;i++){
-      
         for(let x=0;x<posts[i].comments.length;x++){
             num++
             posts[i].comments[x].id="c"+(num)
@@ -76,8 +75,8 @@ const Tweeter=function(){
   } 
   }
   
-  const tweeter=Tweeter()
-  /*  tweeter.addPost("123")
+  /*const tweeter=Tweeter()
+   tweeter.addPost("123")
   tweeter.addPost("123")
   tweeter.addPost("123")
   console.log(tweeter.getPosts())
