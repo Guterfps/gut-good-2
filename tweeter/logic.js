@@ -32,6 +32,9 @@ for(let i=0;i<posts.length;i++){
      posts.splice(i,1)
   }
 }
+for(let x=0;x<posts.length;x++){
+    posts[x].id="p"+(x+1)
+}
 }
 const addComment=function(postid,text){
   let num=1
@@ -54,6 +57,13 @@ const removeComment=function(postID,commentID){
       }
   }
   }
+  let  num=0
+  for(let i=0;i<posts.length;i++){
+      for(let x=0;x<posts[i].comments.length;x++){
+          num++
+          posts[i].comments[x].id="c"+(num)
+      } 
+  }
 }
 
 return {
@@ -65,17 +75,16 @@ return {
 } 
 }
 
-
-/*  tweeter.addPost("123")
+/*const tweeter=Tweeter()
+ tweeter.addPost("123")
 tweeter.addPost("123")
 tweeter.addPost("123")
 console.log(tweeter.getPosts())
-tweeter.removePost("p5")
+tweeter.removePost("p1")
 console.log(tweeter.getPosts())
 tweeter.addComment("p1","qwe")
 console.log(tweeter.getPosts())
-tweeter.addComment("p3","123")
+tweeter.addComment("p1","123")
 console.log(tweeter.getPosts())
 tweeter.removeComment("p1","c2")
-
 */
